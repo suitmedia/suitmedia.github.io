@@ -1,0 +1,11 @@
+# Site settings
+title: Suitmedia Engineering Blog
+email: contact@suitmedia.com
+description: "Suitmedia is an Indonesia-based digital agency, expert in Internet-based technology, web, mobile apps (iOS, Android, BlackBerry) and digital media strategy."
+baseurl: ""
+url: "http://suitmedia.github.io"
+username: suitmedia
+
+# Build settings
+markdown: kramdown
+permalink: pretty
