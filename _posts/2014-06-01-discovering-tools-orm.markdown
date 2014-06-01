@@ -30,7 +30,7 @@ Equivalent into this python code with Django ORM.
 Post.objects.get(active=1, user_id=1)
 {% endhighlight %}
 
-Simple, we want to get one post with `active` and `user_id` is `1`. Here are more complex example.
+Simple, we want to get one post with `active` and `user_id` is `1`. Here is one more complex example.
 
 {% highlight sql %}
 SELECT * FROM posts
@@ -50,7 +50,7 @@ Not only we do not write any SQL and SQL cleaning code, but also the syntax is m
 
 ![ORM Meme][orm-meme]
 
-Using ORM is really an integral part to us in order to develop robust and high performance application swiftly. Numerous line of code to building SQL can be replaced by one line of code that is more intuitive to read. Try it and see the produtivity improvement while developing your apps. Stay tuned for the next Discovering Tools. Keep productive!
+Using ORM is really an integral part to us in order to develop robust and high performance application swiftly. Numerous line of code to building SQL can be replaced by one line of code that is more intuitive to read. Try it and see the productivity improvement while developing your apps. Stay tuned for the next Discovering Tools. Keep productive!
 
 [orm-meme]: https://i.chzbgr.com/maxW500/8207712000/hF6B89741/ "ORM Durrant Meme"
 [doctrine]: http://www.doctrine-project.org/index.html
