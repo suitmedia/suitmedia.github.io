@@ -3,6 +3,7 @@ layout: post
 title:  "Intro to Backend Tech"
 date:   2014-05-30 00:00:00
 author: Edwin Lunando
+author_t: edwinlunando
 ---
 
 

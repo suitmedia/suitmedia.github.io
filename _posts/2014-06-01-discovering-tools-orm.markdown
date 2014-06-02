@@ -3,6 +3,7 @@ layout: post
 title:  "Discovering Tools: Object Relational Mapper"
 date:   2014-06-01 00:00:00
 author: Edwin Lunando
+author_t: edwinlunando
 ---
 
 
