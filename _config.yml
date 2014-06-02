@@ -9,3 +9,5 @@ username: suitmedia
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+fb_app_id: 296407107201754

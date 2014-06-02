@@ -3,7 +3,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.username }}{% endif %}" >
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{ "/assets/suitmedia-logo.jpg" | prepend: site.url }}" />
+    <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.username }}">
+    <meta name="twitter:creator" content="@{{ page.author_t }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ "/assets/suitmedia-logo.jpg" | prepend: site.url }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Custom CSS -->
