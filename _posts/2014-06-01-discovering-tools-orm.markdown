@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "Discovering Tools: Object Relational Mapper"
-date:   2014-06-01 00:00:00
-author: Edwin Lunando
+layout:   post
+title:    "Discovering Tools: Object Relational Mapper"
+date:     2014-06-01 00:00:00
+author:   Edwin Lunando
+author_t: edwinlunando
+excerpt:  I will start writing post series 'Discovering Tools'. This post explains about object relational mapper(ORM). 
 ---
 
 

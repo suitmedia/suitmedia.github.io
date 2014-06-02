@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "Intro to Backend Tech"
-date:   2014-05-30 00:00:00
-author: Edwin Lunando
+layout:   post
+title:    "Intro to Backend Tech"
+date:     2014-05-30 00:00:00
+author:   Edwin Lunando
+author_t: edwinlunando
+excerpt:  While our services are not bounded by programming language or frameworks, we do have our own preference technology when developing high performance and robust web applications.
 ---
 
 
