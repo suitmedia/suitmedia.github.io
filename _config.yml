@@ -5,6 +5,7 @@ description: "Suitmedia is an Indonesia-based digital agency, expert in Internet
 baseurl: ""
 url: "http://suitmedia.github.io"
 username: suitmedia
+timezone: Asia/Jakarta
 
 # Build settings
 markdown: kramdown
