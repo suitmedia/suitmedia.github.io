@@ -1,21 +1,25 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
 
   <div class="wrap">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-1 column">
-      <ul>
+      <p>
+        {{ site.title }} <br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+      <!-- <ul>
         <li>{{ site.title }}</li>
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      </ul>
+      </ul> -->
     </div>
 
     <div class="footer-col-2 column">
       <ul>
         <li>
           <a href="https://github.com/{{ site.username }}">
-            <span class="icon github">
+            <span class="icon github" aria-hidden="true">
               <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
@@ -34,7 +38,7 @@
         </li>
         <li>
           <a href="https://twitter.com/{{ site.username }}">
-            <span class="icon twitter">
+            <span class="icon twitter" aria-hidden="true">
               <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
                 <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
