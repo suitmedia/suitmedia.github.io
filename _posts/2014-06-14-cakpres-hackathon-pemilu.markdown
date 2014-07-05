@@ -74,8 +74,7 @@ Have you heard about phonegap? Yes, this is new framework to bundle your web app
 
 > Really care about the tools you use because they are what make you your best.
 > 
-> *Addy Osmani *
-> *(Engineer at Google)*
+> *Addy Osmani (Engineer at Google)*
 
 
 
