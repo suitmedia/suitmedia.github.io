@@ -7,11 +7,11 @@ author_t: sonnylazuardi
 excerpt:  This is the post about cakpres - online multiplayer trivia game
 ---
 
-# Hackathon
+## Hackathon
 
 Our second week at suitmedia, we try to join hackathon challange. This hackathon was held by Google Developer Group Jakarta. So, we searched for simple idea to use the API for an application. We are the team of five that consist of Sonny, Fathan, Yogi, Harits, and Edwin. At first, I want to try to make hybrid application from web to native application that run on mobile platform such as Android. So, I try to invite my friends to develop this idea. Today's technology support us to make mobile application from web technology stack such as html 5, css 3, and javascript.
 
-# Cakpres
+## Cakpres
 
 Before going further about the technology we use, let's see about cakpres application itself. Cakpres is the abbreviation of "aCAK PRESiden". This name come from Fathan idea. We firstly explored all of the list API given from Pemilu API that might be used for our application.
 
