@@ -3,7 +3,7 @@ layout:   post
 title:    "Mobile Development: Cocoapods"
 date:     2014-07-07 00:00:00
 author:   Wito Chandra
-author_t: lollipop777
+author_t: WitoChandra
 excerpt:  Cocoapods makes Objective-C developers happy
 ---
 In this post you will find how to setup Cocoapods into your Objective-C application project. 
