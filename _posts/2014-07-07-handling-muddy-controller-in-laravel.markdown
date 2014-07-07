@@ -32,6 +32,138 @@ You might repeat all of those code on your controller. The Validation, email, re
 
 ## 1. Service Class
 
+At this method, you might do some trick to pass the input and the reference of controller to our service class.
+
+	public function store()
+	{
+		$input = Input::only('username', 'email', 'password');
+
+		return $this->userCreator->create($input, $this); //at this point you pass references of controller
+	}
+
+	public function userCreationFails($errors)
+	{
+		return Redirect::back()->withInput();
+	}
+
+	public function userCreationSucceeds()
+	{
+		return Redirect::home()->withFlashMessage('Welcome Aboard!');
+	}
+
+And, let see the content of our new class UserCreator
+
+	class UserCreator {
+		public function create($input, UserListener $listener)
+		{
+			try
+			{
+				$this->registrationForm->validate($input);
+			}
+			catch (FormValidationException $e)
+			{
+				return $listener->userCreationFails($e->getErrors());
+			}
+		}
+
+		$user = $this->userRepo->create($input);
+
+		//make an announcement that a user has already signed up
+		$this->event->fire('user.signed_up', $user);
+
+		return $listener->userCreationSucceeds();
+	}
+
+You also can make registrationForm (a model form) that will do validation part for you. Next, you might create interface so that the controller must implement these two methods.
+
+	interface UserListener {
+
+		public function userCreateionFails(MessageBag $errors);
+
+		public function userCreationSucceeds();
+
+	}
+
 ## 2. CommandBus
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/36588397?rel=0" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+> Commands help you in supporting the ubiquitous languange by explicitly capturing user intent at the boundaries of your system
+>
+> __Jef Claes__
+
+Here we can use commandbus pattern to solve this problem
+
+	public function store()
+	{
+		extract(Input::only('username', 'email', 'password'));
+
+		$command = new SubscribeUserCommand($username, $email, $password);
+
+		$this->commandBus->execute($command);
+
+		return Redirect::home();
+	}
+
+Then, let's see our SubscribeUserCommand Class
+
+	class SubscribeUserCommand {
+
+		public $username;
+		public $password;
+		public $email;
+
+		function __construct($username, $email, $password)
+		{
+			$this->username = $username;
+			$this->email = $email;
+			$this->password = $password;
+		}
+
+	}
+
+This is pretty simple class that will receive the input. Now, let's go to the commandbus class. The name bus because basicly it can get you to where you need to be. notice that we have one on one relationship and associative in your class.
+
+	<?php namespace Suitmedia\Commanding;
+
+	use Illuminte\Foundation\Application as App;
+
+	class CommandBus {
+
+		public function __construct(App $app, CommandNameTranslator $commandNameTranslator)
+		{
+			$this->app = $app;
+			$this->commandNameTranslator = $commandNameTranslator;
+		}
+
+		public function execute($command)
+		{
+			$handler= $this->commandNameTranslator->toCommandHandler($command);
+
+			return $this->app->make($handler)->handle($command);
+		}
+	}
+
+Here is the simple command handler for subscribing user
+
+	<?php namespace Suitmedia\Users;
+
+	use Suitmedia\Commanding\CommandHandler;
+	use Suitmedia\Eventing\EventDispatcher;
+
+	class SubscribeUserCommandHandler implements CommandHandler {
+		public function __construct(User $user, EventDispatcher $dispatcher)
+		{
+			$this->user = $user;
+			$this->dispatcher = $dispatcher;
+		}
+
+		public function handle($subsribeUserCommand)
+		{
+			$this->user->subscribe($subscribeUserCommand);
+			$this->user->save();
+
+			$this->dispatcher->dispatch($this->user->releaseEvents());
+		}
+	}
+
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/eqN-rt-D9KQ" frameborder="0" allowfullscreen></iframe>
