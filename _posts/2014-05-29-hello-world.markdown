@@ -4,7 +4,7 @@ title:    "Hello World!"
 date:     2014-05-29 00:00:00
 author:   Anggriawan Sugianto
 author_t: anggriawan
-excerpt:  This is first post in Suitmedia Engineering Blog. We use Jekyll for the blogging platform and Github Pages for the hosting.
+excerpt:  First post! We use Jekyll for the blogging platform and Github Pages for the hosting.
 ---
 
 So this is first post in Suitmedia Engineering Blog. 

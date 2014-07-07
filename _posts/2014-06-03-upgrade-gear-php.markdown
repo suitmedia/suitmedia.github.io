@@ -4,7 +4,7 @@ title:    "Upgrade Your Gear: PHP"
 date:     2014-06-03 00:00:00
 author:   Edwin Lunando
 author_t: edwinlunando
-excerpt:  I will start writing post series 'Discovering Tools'. This post explains about object relational mapper(ORM).
+excerpt:  Upgrading has a long standing reputation for being not a trivial task to do.
 ---
 
 

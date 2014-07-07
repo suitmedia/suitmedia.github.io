@@ -38,7 +38,8 @@ At this method, you might do some trick to pass the input and the reference of c
 	{
 		$input = Input::only('username', 'email', 'password');
 
-		return $this->userCreator->create($input, $this); //at this point you pass references of controller
+		//at this point you pass references of controller
+		return $this->userCreator->create($input, $this); 
 	}
 
 	public function userCreationFails($errors)
@@ -165,5 +166,4 @@ Here is the simple command handler for subscribing user
 		}
 	}
 
-
-<iframe width="853" height="480" src="//www.youtube.com/embed/eqN-rt-D9KQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="//www.youtube.com/embed/eqN-rt-D9KQ?rel=0" frameborder="0" allowfullscreen></iframe>
