@@ -1,0 +1,6 @@
+{
+  "name": "Suitmedia-engineering-blog",
+  "dependencies": {
+    "prism": "git@github.com:LeaVerou/prism.git#gh-pages"
+  }
+}

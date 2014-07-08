@@ -229,8 +229,8 @@ img {
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
-.post pre,
-.post code {
+.highlight pre,
+.highlight code {
   border: 1px solid #d5d5e9;
   background-color: #eef;
   padding: 8px 12px;

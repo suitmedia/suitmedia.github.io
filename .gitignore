@@ -16,3 +16,9 @@ Icon?
 ehthumbs.db
 Thumbs.db
 Desktop.ini
+
+
+# Bower
+# ----------------------------------------------------------------------- #
+
+bower_components
