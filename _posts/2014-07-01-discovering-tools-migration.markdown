@@ -23,7 +23,7 @@ From those two methods, there are three additional problems. It is how do I reme
 
 Migration tools usually comes with an application framework. Migration is usually tied to a framework as part the the framework design since it was one of the most crucial aspect in developing apps. But, there are still a lot of standalone migration libraries. The first step to migrate your database it to code you database change. Usually, there are command to generate blank migration file to let you code the database structure. Here is the examples. This one is from PHP - Laravel.
 
-{% highlight php %}
+{% prism php %}
 <?php
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -51,11 +51,11 @@ class CreateAdminTable extends Migration {
         Schema::dropIfExists('users');
     }
 }?>
-{% endhighlight %}
+{% endprism %}
 
 And this one is from Ruby - Rails.
 
-{% highlight ruby %}
+{% prism ruby %}
 class CreateUsers < ActiveRecord::Migration
   def up
     create_table :users, do |t|
@@ -76,11 +76,11 @@ class CreateUsers < ActiveRecord::Migration
     drop_table :memberships
   end
 end
-{% endhighlight %}
+{% endprism %}
 
 It is amazing, right? We do not need to write SQL. We only need to code it right here, right now. With object oriented style, the code is pretty intuitive and readable. Both version of the code generate the same database structure. The `up` function is executed when the `migrate` command is used. The `down` function is executed when the `rollback` command is used. Now, if we want to add or drop column from the database schema, we need to generate a blank migration file template and code it Oh yeah, I forgot to mention that this code works on multiple database like MySQL, PostgreSQL, SQLite, and many more. Here are the examples. This one is from PHP - Laravel.
 
-{% highlight php %}
+{% prism php %}
 <?php
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -103,11 +103,11 @@ class ChangeAdminTable extends Migration {
         });
     }
 }?>
-{% endhighlight %}
+{% endprism %}
 
 This one is from Ruby - Rails
 
-{% highlight ruby %}
+{% prism ruby %}
 class ChangeUsers < ActiveRecord::Migration
   def up
     change_table :users, do |t|
@@ -120,7 +120,7 @@ class ChangeUsers < ActiveRecord::Migration
     remove_column :users, :address
   end
 end
-{% endhighlight %}
+{% endprism %}
 
 In this case, we want to add a simple column while migrating the database structure and remove the column when we rollback the database. Simple and clean. We need to keep the migration files into the code versioning system in order to share the migrations files to the other working developers. The other developer only need to run the `migrate` command and their database is updated and healthy. We are all happy developers. If you want to try the real migration tutorial, you can check at [Laravel][laravel-migration] and [Rails][rails-migration].
 
