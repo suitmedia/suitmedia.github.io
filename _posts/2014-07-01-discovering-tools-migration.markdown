@@ -78,7 +78,7 @@ class CreateUsers < ActiveRecord::Migration
 end
 {% endhighlight %}
 
-It is amazing, right? We do not need to write SQL. We only need to code it right here, right now,  with object oriented style. The code is pretty intuitive and readable. Both version of the code generate the same database structure. The `up` function is executed when the `migrate` command is used. The `down` function is executed when the `rollback` command is used. Now, if we want to add or drop column from the database schema, we need to generate a blank migration file template and code it Oh yeah, I forgot to mention that this code works on multiple database like MySQL, PostgreSQL, SQLite, and many more. Here are the examples. This one is from PHP - Laravel.
+It is amazing, right? We do not need to write SQL. We only need to code it right here, right now. With object oriented style, the code is pretty intuitive and readable. Both version of the code generate the same database structure. The `up` function is executed when the `migrate` command is used. The `down` function is executed when the `rollback` command is used. Now, if we want to add or drop column from the database schema, we need to generate a blank migration file template and code it Oh yeah, I forgot to mention that this code works on multiple database like MySQL, PostgreSQL, SQLite, and many more. Here are the examples. This one is from PHP - Laravel.
 
 {% highlight php %}
 <?php
