@@ -20,31 +20,31 @@ ORM is usually already wrapped inside one framework as one of the feature, but t
 
 Obviously, we do not need to write SQL while using ORM. If we do not use ORM, imagine building all the SQL strings in our own code and clean it to protect from SQL injection. This very tedious task to do because we need to build the SQL string for every database operation. Here are some examples of the use of ORM. In this example, we have `posts` table that translated into `Post` class and `tags` table into `Tag` class.
 
-{% highlight sql %}
+{% prism sql %}
 SELECT *
 FROM posts
 WHERE active = 1 AND user_id = 1 LIMIT 1
-{% endhighlight %}
+{% endprism %}
 
 Equivalent into this python code with Django ORM.
 
-{% highlight python %}
+{% prism python %}
 Post.objects.get(active=1, user_id=1)
-{% endhighlight %}
+{% endprism %}
 
 Simple, we want to get one post with `active` and `user_id` is `1`. Here is one more complex example.
 
-{% highlight sql %}
+{% prism sql %}
 SELECT * FROM posts
 INNER JOIN tags ON posts.tag_id = tags.id
 WHERE tags.name LIKE '%sql%'
-{% endhighlight %}
+{% endprism %}
 
 Equivalent into.
 
-{% highlight python %}
+{% prism python %}
 Post.objects.filter(tags__name__contains='sql')
-{% endhighlight %}
+{% endprism %}
 
 Not only we do not write any SQL and SQL cleaning code, but also the syntax is more intuitive from the object-oriented design perpective. With this, the amount of code written is reduced so that, the code much more cleaner with SQL-free code. :D. Happy developers!
 

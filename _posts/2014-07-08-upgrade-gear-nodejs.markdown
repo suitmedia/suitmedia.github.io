@@ -13,10 +13,10 @@ In every platform, the simplest way to upgrading your Node.js is replacing the c
 
 Windows is the most trivial when it comes to upgrading Node.js. Just uninstall the Node.js and fresh install the newest one. Mac is also the same. You only need to run the installer and the latest version of Node.js will be installed. The problem rises when you use old version of linux OS. If you cannot use debian, then you need to override the Node.js binaries by yourself. First, check the Node.js installation directory by using this command
 
-{% highlight bash %}
+{% prism bash %}
 which node
 which npm
-{% endhighlight %}
+{% endprism %}
 
 In Suitmedia server case, the result is:
 
@@ -25,16 +25,16 @@ In Suitmedia server case, the result is:
 
 Then, extract the compressed binaries by using this command
 
-{% highlight bash %}
+{% prism bash %}
 tar -xvzf node-v0.10.29.tar.gz
-{% endhighlight %}
+{% endprism %}
 
 Finally, you only need to go the `bin` directory and override the installed binaries with:
 
-{% highlight bash %}
+{% prism bash %}
 sudo cp node /usr/local/bin/node
 sudo cp npm /usr/local/bin/npm
-{% endhighlight %}
+{% endprism %}
 
 That's it! Fortunately, upgrading Node.js is not as hard and complicated as upgrading other tools that has a lot of dependency and configuration.
 
