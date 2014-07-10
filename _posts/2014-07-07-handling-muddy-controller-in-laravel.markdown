@@ -8,7 +8,7 @@ excerpt:  This is the post about how to handle the muddy controller in Laravel 4
 ---
 Have you ever seen the code below ?
 
-	{% highlight php %}
+	{% prism php %}
 	public function store()
 	{
 		$input = Input::only('username', 'email', 'password');
@@ -28,7 +28,7 @@ Have you ever seen the code below ?
 	
 		return Redirect::home()->withFlashMessage('Welcome Aboard!');
 	}
-	{% endhighlight %}
+	{% endprism %}
 
 You might repeat all of those code on your controller. The Validation, email, redirect and other similar stuff. Have you ever thought that we might create some class that might be inherited to make life easier? In laracon 2014, Jeffrey Way explain at least two ways of doing this.
 
