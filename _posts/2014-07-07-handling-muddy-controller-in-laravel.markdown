@@ -8,7 +8,7 @@ excerpt:  This is the post about how to handle the muddy controller in Laravel 4
 ---
 Have you ever seen the code below ?
 
-{% highlight %}
+{% highlight php %}
 	public function store()
 	{
 		$input = Input::only('username', 'email', 'password');
