@@ -244,6 +244,10 @@ img {
 
 .highlight pre {
   padding: 1em;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  overflow: auto;
 }
 
 .post ul,
