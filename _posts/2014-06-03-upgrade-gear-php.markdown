@@ -18,10 +18,10 @@ I’m assuming that you’re running these commands as root; therefore, I do not
 
 Before compiling any applications, we need to set up the build dependency. We need all the library dependency for building PHP. You only need to run this command.
 
-{% prism bash %}
+{% highlight bash %}
 apt-get install build-essential
 apt-get build-dep php5
-{% endprism %}
+{% endhighlight %}
 
 If you don’t run this command or install the required libraries, you’ll get all kinds of unpleasant errors and warning from the PHP configure command.
 
@@ -29,11 +29,11 @@ If you don’t run this command or install the required libraries, you’ll get 
 
 Obviously, we do need the source code to compile and install any application.
 
-{% prism bash %}
+{% highlight bash %}
 wget http://de.php.net/get/php-5.5.x.tar.bz2/from/this/mirror -O php-5.5.x.tar.bz2
 tar jxf php-5.5.x.tar.bz2
 cd php-5.5.x/
-{% endprism %}
+{% endhighlight %}
 
 Change the `x` with the version you need. After running these commands, you should be inside the extracted directory.
 
@@ -41,7 +41,7 @@ Change the `x` with the version you need. After running these commands, you shou
 
 Before we compile the source code, we need to configure the PHP code like the place to install, what library you want to include with your PHP, and binding with another app like Apache. Here are our configuration command.
 
-{% prism bash %}
+{% highlight bash %}
 ./configure \
 --prefix=/etc/php5 \
 --with-config-file-path=/etc/php5/apache2  \
@@ -92,7 +92,7 @@ Before we compile the source code, we need to configure the PHP code like the pl
 --with-xsl \
 --enable-opcache \
 --enable-fpm
-{% endprism %}
+{% endhighlight %}
 
 
 You can see the full configuration [here][php-configuration]. Add the configuration as your need. Some of the most important configuration is:
@@ -108,24 +108,24 @@ The rest is optional. I recommend to install as many library as possible since y
 
 Once you have successfully run the `./configure` command, you’ll need to run the make command to compile PHP.
 
-{% prism bash %}
+{% highlight bash %}
 make
-{% endprism %}
+{% endhighlight %}
 
 After that, run
 
-{% prism bash %}
+{% highlight bash %}
 make test
-{% endprism %}
+{% endhighlight %}
 
 If you are compiling an unreleased version of PHP source code, do the community a favor and run these tests. Report any test failures you encounter. If you come across failures, run `make clean`
 
 
 After running make test, it’s time to install PHP. Run make install to install PHP to the destination you chose in configuration.
 
-{% prism bash %}
+{% highlight bash %}
 make install
-{% endprism %}
+{% endhighlight %}
 
 If you get any errors, reconfigure your installation and run `make clean` before anything to ensure it was a clean compile.
 

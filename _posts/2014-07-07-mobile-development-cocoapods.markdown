@@ -43,13 +43,13 @@ To search a dependency you can go to [Cocoapods](http://cocoapods.org), or run:
 
 You should add your dependency into ```Podfile```.
 
-{% prism ruby %}
+{% highlight ruby %}
 platform :ios, '7.1'
 
 pod 'AFNetworking', '2.0'
 pod 'Facebook-iOS-SDK', '~> 3.10.0'
 pod 'your-dependency'
-{% endprism %}
+{% endhighlight %}
 
 After that run:
 

@@ -26,26 +26,26 @@ In this case, we will deploy our application to our staging server. This example
 
 After you install `ruby`, run `gem install capistrano` to install Capistrano. Then, run `cap install` at your project directory. It should generated the required files. The `Capfile` is the main capistrano file to mark a project deployed using Capistrano, `deploy.rb` file is to set the main configuration, and `staging.rb` and `production.rb` is environment specific configuration file. Now, open `deploy.rb` file inside `config` directory and set these variables
 
-{% prism ruby %}
+{% highlight ruby %}
 set :application, 'test'  # Set this to your application name
 set :repo_url, 'git@bitbucket.org:test/test.git'  # Set this to your repository SSH URI
 set :deploy_to, '/var/www/test'  # Set your deployment target directory
-{% endprism %}
+{% endhighlight %}
 
 After that, open `staging.rb` to set the user and server location.
 
-{% prism ruby %}
+{% highlight ruby %}
 role :app, %w{user@ip}  # Set user to your deploy server user.
 role :web, %w{user@ip}  # Set ip to your server ip. e.g. 123.123.23.78
 role :db,  %w{user@ip}
 server 'ip', user: 'user', roles: %w{web app}, my_property: :my_value
-{% endprism %}
+{% endhighlight %}
 
 Next, since the latest Capistrano use public key authentication, you need to add your public key into `~/.ssh/authorized_keys` on your user home directory. If you do not have any public-secret key, generate the key first with this [guide][github-ssh]. Ideally, you need to use the same public key with your git account. Finally, run `cap staging deploy` on your local terminal and it will deploy your code automatically to your server. Every time you want to deploy your latest code, just run the command again.
 
 If you need to do some operation like updating your library or migrating your database after deploy, you can add the command at this code.
 
-{% prism ruby %}
+{% highlight ruby %}
 namespace :deploy do
 
   desc 'Restart application'
@@ -60,7 +60,7 @@ namespace :deploy do
   after :publishing, :restart
 
 end
-{% endprism %}
+{% endhighlight %}
 
 You see? We just need to write our commands as string on the code and it will be executed. I use this example to migrate my Laravel application after the deployment is finished. If you need to rollback your application to the previous release, you only need to run `cap staging deploy:rollback`. What I have showed you is just the tip of the iceberg from Capistrano. You can access the full configuration [here][capistrano-git].
 
