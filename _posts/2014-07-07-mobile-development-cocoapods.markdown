@@ -17,19 +17,25 @@ By using Cocoapods you can find and use many usefull libraries that will help yo
 
 Cocoapods is written in Ruby. To install Cocoapods, you can simply run:
 
-    sudo gem install cocoapods
+{% highlight bash %}
+sudo gem install cocoapods
+{% endhighlight %}
 
 ## Setup project
 
 After creating your Objective-C project, in your project directory you can run:
 
-    pod init
+{% highlight bash %}
+pod init
+{% endhighlight %}
 
 That command will create file named Podfile.
 You can specify your dependencies in that file.
 Then run this command to setup your project and install the dependencies.
-
-    pod install
+ 
+{% highlight bash %}
+pod install
+{% endhighlight %}
 
 Now you should open ```<your-project-name>.xworkspace``` to open your project.
 
@@ -37,7 +43,9 @@ Now you should open ```<your-project-name>.xworkspace``` to open your project.
 
 To search a dependency you can go to [Cocoapods](http://cocoapods.org), or run:
 
-    pod search <keywords>
+{% highlight bash %}
+pod search <keywords>
+{% endhighlight %}
 
 ## Add dependencies
 
@@ -53,7 +61,9 @@ pod 'your-dependency'
 
 After that run:
 
-    pod update
+{% highlight bash %}
+pod update
+{% endhighlight %}
 
 By running that command cocoapods will install:
 
@@ -62,7 +72,7 @@ By running that command cocoapods will install:
 3. ```your-dependency``` with lastest version
 
 Notice that in ```Podfile``` you can specify the version of a dependency you use.
-The other ways to specifying dependency version:
+The other ways to specify dependency version:
 
 1. ```'~> 2.0'``` means version ```2.0``` and version up to ```3.0``` not including ```3.0``` or higher
 2. ```'> 2.0'``` means any version higher than ```2.0```
