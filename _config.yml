@@ -10,5 +10,7 @@ timezone: Asia/Jakarta
 # Build settings
 markdown: kramdown
 permalink: pretty
+paginate: 8
+
 
 fb_app_id: 296407107201754

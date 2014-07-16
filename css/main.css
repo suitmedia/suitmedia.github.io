@@ -267,6 +267,26 @@ img {
 
 .post pre.terminal code { background-color: #333; }
 
+/* Pagination
+--------------------------------------------------------------------------- */
+
+.pagination {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.pagination__item {
+  display: inline-block;
+}
+
+.pagination-anchor {
+  display: block;
+  padding: .4em;
+}
+
+
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
 
