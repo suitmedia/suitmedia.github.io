@@ -9,8 +9,8 @@ layout: default
   <ul class="posts">
     {% for post in paginator.posts %}
       <li>
-        <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
