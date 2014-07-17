@@ -5,11 +5,11 @@ layout: default
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <!-- <h1>Posts</h1> -->
 
   <ul class="posts">
     {% for post in paginator.posts %}
-      <li>
+      <li class="box">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <p>{{ post.excerpt }}</p>
@@ -19,7 +19,7 @@ layout: default
 
   {% if paginator.total_pages > 1 %}
   <ul class="pagination">
-    <li class="pagination__item">
+    <li class="pagination__item pagination-btn">
       {% if paginator.previous_page %}
         <a class="pagination-anchor" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
       {% else %}
@@ -39,7 +39,7 @@ layout: default
     </li>
     {% endfor %}
     
-    <li class="pagination__item">
+    <li class="pagination__item pagination-btn">
     {% if paginator.next_page %}
       <a class="pagination-anchor" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
     {% else %}
