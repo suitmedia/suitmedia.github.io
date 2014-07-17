@@ -19,7 +19,7 @@ body {
 h1, h2, h3, h4, h5, h6 {font-family: 'Ubuntu', sans-serif; font-size: 100%; font-weight: 700; color: #615956;}
 
 a         { 
-  color: #b55837; 
+  color: #e86334; 
   text-decoration: none;
   transition:all .2s ease-out;
   -webkit-transition:all .2s ease-out;
@@ -51,7 +51,9 @@ img {
   margin: 0 auto;
   zoom: 1;
 }
-
+iframe {
+  max-width: 100%;
+}
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
@@ -733,8 +735,5 @@ a.pagination-anchor:hover {
   }
   .box {
     padding: 15px;
-  }
-  .site-nav .page-link {
-    color: #b55837;
   }
 }

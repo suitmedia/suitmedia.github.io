@@ -11,7 +11,7 @@
     <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="{{ "/assets/suitmedia-logo.jpg" | prepend: site.url }}" />
+    <meta property="og:image" content="{{ "/assets/img/img-card.jpg" | prepend: site.url }}" />
     <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
 
     <meta name="twitter:card" content="summary">
@@ -19,12 +19,19 @@
     <meta name="twitter:creator" content="@{{ page.author_t }}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:image" content="{{ "/assets/suitmedia-logo.jpg" | prepend: site.url }}">
+    <meta name="twitter:image" content="{{ "/assets/img/img-card.jpg" | prepend: site.url }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="{{ "/assets/img/favicon.png" | prepend: site.baseurl }}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "http://fonts.googleapis.com/css?family=Ubuntu:700,700italic" | prepend: site.baseurl }}">
+
+     <!-- -->
+    <!--[if lt IE 9]>
+    <script src="{{ "/assets/js/html5shiv.js" | prepend: site.baseurl }}"></script>
+    <![endif]-->
 
 </head>
