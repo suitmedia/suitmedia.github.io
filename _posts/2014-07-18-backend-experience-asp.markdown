@@ -4,7 +4,7 @@ title:    "Backend Experience: ASP .NET"
 date:     2014-07-18 00:00:00
 author:   Edwin Lunando
 author_t: edwinlunando
-excerpt:  My experience on using ASP .NET on client request
+excerpt:  My experience on using ASP .NET MVC. A great framework with great libraries.
 ---
 
 
