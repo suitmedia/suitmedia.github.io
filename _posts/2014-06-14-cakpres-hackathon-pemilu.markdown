@@ -70,6 +70,10 @@ This is one of the new technology that I want to share. One of the features that
 
 Have you heard about phonegap? Yes, this is new framework to bundle your web app to mobile app. As we develop cakpres, ionic is still in beta version. But it has already good to make a mobile app because of course it uses angular in its bundle. I think it's the great combo between firebase, angular, and ionic because they support each other.
 
+## Download Apps
+
+[![google](http://www.icitizen.com/smTemplate/img/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.suitmedia.cakpres)
+
 ## Last Word
 
 > Really care about the tools you use because they are what make you your best.
