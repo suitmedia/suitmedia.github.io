@@ -4,8 +4,8 @@ title:    "Remote Selfie - Angular.js on wearable devices"
 date:     2014-07-19 12:58:00
 author:   Sonny Lazuardi Hermawan
 author_t: sonnylazuardi
-excerpt:  The remote selfie application on samsung gear using angular.js
---- 
+excerpt:  The remote selfie application on Samsung Gear using Angular.js
+---
 
 Today, Samsung has released the new wearable technology called Samsung Gear that can be used as your handwatch. Samsung also launched gear app challange this July. So, we want to try to build cool application that run on this platform. We are using angular.js on the gear because the simplicity and easeness of the framework. We can build the app on device in fast time.
 
