@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "Remote Selfie - Angular.js on wearable devices"
-date:     2014-07-17 10:45:00
+date:     2014-07-19 12:58:00
 author:   Sonny Lazuardi Hermawan
 author_t: sonnylazuardi
 excerpt:  The remote selfie application on samsung gear using angular.js
