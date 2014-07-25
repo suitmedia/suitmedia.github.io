@@ -185,13 +185,18 @@ iframe {
 
 .posts .post-link {
   font-family: 'Ubuntu', sans-serif;
-  color: #5e5551;
   font-size: 32px;
-  /*letter-spacing: -1px;*/
   line-height: 1;
   text-decoration: none;
 }
-.posts .post-link:hover {
+
+.post-link__anchor {
+  color: #5e5551;
+}
+
+.post-link__anchor:hover,
+.post-link__anchor:focus {
+  text-decoration: none;
   color: #e14b15;
 }
 
