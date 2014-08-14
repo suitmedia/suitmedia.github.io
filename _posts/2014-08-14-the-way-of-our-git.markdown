@@ -15,7 +15,7 @@ We came up to the idea of two simple branches. The `develop` and `master` branch
 
 ![Master Develop Icon][master-develop]
 
-This two branches system is used because we need to deploy a version of our code in the middle of the development. To make sure the our development code does not clash with the deployed code, we deploy our code from the `master`. For hot fixes, we let the developers to commit to the `master`.
+This two branches system is used because we need to deploy a version of our code in the middle of the development. To make sure the our development code does not clash with the deployed code, we deploy our code from the `master`. For hot fixes, we let the developers to commit to the `master`. And one thing to remember, always pull your code first and solve the conflict before commiting and pushing the files.
 
 ## The Files ##
 
