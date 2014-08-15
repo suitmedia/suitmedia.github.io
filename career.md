@@ -6,7 +6,7 @@ author:     Anggriawan Sugianto
 author_t:   anggriawan
 ---
 
-As a fast-growing digital agency, Suitmedia is continuously seeking for developers and analysts to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer in the team, you will grow together with us and get many great experiences.
+As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is continuously seeking for developers and analysts to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer in the team, you will grow together with us and get many great experiences.
 
 What is interesting about working at Suitmedia?
 
@@ -83,3 +83,6 @@ Qualification:
 
 
 If you feel that you meet the above qualification and would like to be part of us, please send your complete resume to [job@suitmedia.com](mailto:job@suitmedia.com?cc=yoga@suitmedia.com,vita@suitmedia.com&subject=APPLY : <Enter Your Wanted Position Here>).
+
+For other non-engineering positions, please visit our homepage [suitmedia.com/career](http://suitmedia.com/career).
+
