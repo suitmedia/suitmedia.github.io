@@ -86,3 +86,8 @@ If you feel that you meet the above qualification and would like to be part of u
 
 For other non-engineering positions, please visit our homepage [suitmedia.com/career](http://suitmedia.com/career).
 
+<blockquote class="twitter-tweet" lang="en"><p>Bocoran! Ini rumah dan tempat main kami yang baru nanti! <a href="https://twitter.com/hashtag/HomeSuitHome?src=hash">#HomeSuitHome</a> <a href="http://t.co/n80SUhvJCX">pic.twitter.com/n80SUhvJCX</a></p>&mdash; Suitmedia (@suitmedia) <a href="https://twitter.com/suitmedia/statuses/351649365934350336">July 1, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p>Kami nggak ingin ketinggalan demam bola! Hari ini kami datang ke kantor memakai jersey favorit loh! :D <a href="http://t.co/X9rdQGUQbD">pic.twitter.com/X9rdQGUQbD</a></p>&mdash; Suitmedia (@suitmedia) <a href="https://twitter.com/suitmedia/statuses/478485380161753088">June 16, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
