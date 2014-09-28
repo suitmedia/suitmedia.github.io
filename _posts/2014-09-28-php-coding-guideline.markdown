@@ -4,7 +4,7 @@ title:    "Coding Guideline: PHP"
 date:     2014-09-28 00:00:00
 author:   Edwin Lunando
 author_t: edwinlunando
-excerpt:  PHP coding guideline to
+excerpt:  PHP coding guideline to make your code even more readable
 ---
 
 Good day, fellow readers. Since Suitmedia is an project-based agency, every project could be handled by a lot of person. For example, if we get an old projects that has already developed by a lot of people, the code is very ugly. A lot of hard coded method and algorithm, no function abstraction, single character variable names, and many more. We do realize that in our teams, the coding style of every developer is quite different. So, in order to make the context switching time more effective and happy, we decided to make our own guideline for PHP code. Yay!
