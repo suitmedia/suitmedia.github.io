@@ -146,4 +146,6 @@ $username = 'ICEFROG';
 $app_version = 6.82;
 {% endhighlight %}
 
-Alright, it is done, for now. We will update this post if we feel the need to update the guideline. Until that time, stay awesome with your code. :)
+We take a lot of rule from the [PHP-FIG][php-fig] group. Alright, it is done, for now. We will update this post if we feel the need to update the guideline. Until that time, stay awesome with your code. :)
+
+[php-fig]: http://www.php-fig.org/
