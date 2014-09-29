@@ -23,7 +23,7 @@ Well, it has no use, instead giving a chance to make bug for your code. Only do 
 
 Easier to see changes with side-by-side diff. It make your code more readable. We do not want to see 10 method call in one line. XD. Do not do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function getRegister()
 { $user = new User(); return View::make('frontend.register')->with('user', $user);  // Hell
 }
@@ -31,7 +31,7 @@ public function getRegister()
 
 Do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function getRegister()
 {
     $user = new User();
@@ -43,7 +43,7 @@ public function getRegister()
 
 If you somehow has a function with a lot of arguments, you may split the argument in different line like this.
 
-{% highlight php %}
+{% highlight php startinline %}
 class ClassName
 {
     public function aVeryLongMethodName(
@@ -60,7 +60,7 @@ class ClassName
 
 Enough spaces in the code makes it is easier to read. We do not want to read codes that has no spaces at all. It is just hard. So, please do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 function getRegister($type)
 {  // Opening bracket on new line after class of function
     if ($type) {  // Opening bracket in the same line after control statement
@@ -78,7 +78,7 @@ The opening bracket after a class or a function must be after a new line. The op
 
 Yes, we need to know whether a method or attribute is static, public, private, or protected. Never ever do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 function getRegister()  // No visibility declaration
 {
     $user = new User();
@@ -88,7 +88,7 @@ function getRegister()  // No visibility declaration
 
 Instead, do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function getRegister()  // It is a public method
 {
     $user = new User();
@@ -100,7 +100,7 @@ public function getRegister()  // It is a public method
 
 We believe using camel case will make our code more readable. Since it is the international standard for method names in PHP, we want to stick to the ground rules. Do not do this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function get_register()  // Underscore
 {
     $user = new User();
@@ -110,7 +110,7 @@ public function get_register()  // Underscore
 
 Or this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function getreg()  // Bad abbreviation
 {
     $user = new User();
@@ -120,7 +120,7 @@ public function getreg()  // Bad abbreviation
 
 Instead of this.
 
-{% highlight php %}
+{% highlight php startinline %}
 public function getRegister()  // Best
 {
     $user = new User();
@@ -132,7 +132,7 @@ public function getRegister()  // Best
 
 Simple, we do not want variable names like this.
 
-{% highlight php %}
+{% highlight php startinline %}
 $i = 0;
 $j = 'TEST';
 $asd = 6.82;
@@ -140,7 +140,7 @@ $asd = 6.82;
 
 But we want it like this way.
 
-{% highlight php %}
+{% highlight php startinline %}
 $counter = 0;
 $username = 'ICEFROG';
 $app_version = 6.82;
