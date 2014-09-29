@@ -10,6 +10,8 @@ As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is conti
 
 What is interesting about working at Suitmedia?
 
+* Learn fast while working with clients from various industries
+* Chance to build your own startups with company supports
 * Competitive salary
 * Flexible working hour
 * Annual and performance-based bonus
