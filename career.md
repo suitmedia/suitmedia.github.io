@@ -1,12 +1,12 @@
 ---
 layout:     page
-title:      Career
+title:      Career at Suitmedia
 permalink:  /career/
 author:     Anggriawan Sugianto
 author_t:   anggriawan
 ---
 
-As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is continuously seeking for developers and analysts to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer in the team, you will grow together with us and get many great experiences.
+As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is continuously seeking for great talents to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer in the team, you will grow together with us and get many great experiences.
 
 What is interesting about working at Suitmedia?
 
@@ -14,7 +14,8 @@ What is interesting about working at Suitmedia?
 * Flexible working hour
 * Annual and performance-based bonus
 * Good health care package
-* Company vacation perks
+* Company vacations
+* Office perks: swimming pool, Xbox, boardgames, etc.
 
 
 Currently we are looking for:
@@ -24,7 +25,7 @@ SOFTWARE ENGINEER
 
 Responsibility:
 
-* Developing high-performance web applications
+* Develop high-performance web applications
 
 Requirements:
 
@@ -33,22 +34,9 @@ Requirements:
 * Experienced in creating web apps using MVC frameworks
 * Knowledgeable in Linux system administration
 
+Location:
 
-FRONTEND WEB DEVELOPER
----
-
-Responsibility:
-
-* Creating high quality HTML/CSS/JavaScript code that matches client-approved designs
-
-Qualification:
-
-* Bachelor in Computer Science, Design or other majors with practical experiences
-* Experienced in converting mockups (PSD or AI) design to beautiful, semantic, clean, non-cluttered HTML/CSS code
-* Solid proficiency in client-side web technologies such as: HTML, CSS, JavaScript/jQuery
-* Good understanding about usability and user experience (UX) design
-* Knowledge of browser/platform compatibility issues
-* Responsive Design experience is a plus
+* Jakarta (Web Developer)
 
 
 MOBILE APP DEVELOPER
@@ -56,30 +44,39 @@ MOBILE APP DEVELOPER
 
 Responsibility:
 
-* Developing highly innovative mobile application
+* Develop beautiful and robust mobile apps
 
 Qualification:
 
 * Bachelor in Computer Science or other majors with practical experiences
-* Possess knowledge and experiences on Object Oriented Programming (OOP) : Java / C++
-* Passion on Mobile Application Development: BlackBerry / Android / iOS / etc
-* Experience on developing & delivering a Mobile Application on any platform is a plus
+* Excellent knowledge and experiences in Object Oriented Programming
+* Strong passion in Mobile technology, especially Android and iOS
+* Experience in developing and delivering mobile app in any platform is a plus
+
+Location:
+
+* Bandung (Android Developer)
 
 
-SYSTEM ANALYST
+ANALYST
 ---
 
 Responsibility:
 
-* Analyzing client requirement into specification and architectural design for developers
+* Analyze client requirement into specification and architectural design
 
 Qualification:
 
-* Bachelor in Information System, Computer Science or other majors with practical experiences
-* Strong business requirement analysis: understanding clients and developing wireframe
+* Bachelor in Information System or Computer Science, preferably female
+* Excellent requirement analysis: understanding clients and developing wireframe
 * Good technical knowledge: MVC, ER and OO design
 * Good sense of user experience design
-* Programming knowledge is not mandatory, but it's a plus
+* Excellent communication and interpersonal skills
+
+Location:
+
+* Jakarta (System Analyst)
+* Bandung (Mobile Solution Analyst)
 
 
 If you feel that you meet the above qualification and would like to be part of us, please send your complete resume to [job@suitmedia.com](mailto:job@suitmedia.com?cc=yoga@suitmedia.com,vita@suitmedia.com&subject=APPLY : <Enter Your Wanted Position Here>).
