@@ -15,4 +15,4 @@ paginate: 8
 
 fb_app_id: 296407107201754
 
-highlighter: false
+highlighter: pygments
