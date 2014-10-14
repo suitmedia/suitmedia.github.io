@@ -45,7 +45,7 @@ and go on until every `Book` is iterated. Every foreign key access will make the
 
 ## Solution: Eager Loading ##
 
-Fortunately, most of the ORM developer has already aware of this problem and comes with a solution. We need to prepopulate the foreign key attribute before use it. In this case of `Store` and `Book`, it is better to have one or two big SQL queries rather than gazzilions of small query because every new request will give I/O overhead. This technique is calles Eager Loading. By using eager loding on N + 1 query problem, it will boost your performace through the roof. This is the implementation on the solution.
+Fortunately, most of the ORM developer has already aware of this problem and comes with a solution. We need to prepopulate the foreign key attribute before use it. In this case of `Store` and `Book`, it is better to have one or two big SQL queries rather than gazzilions of small query because every new request will give constant I/O overhead. This technique is calles Eager Loading. By using eager loding on N + 1 query problem, it will boost your performace through the roof. This is the implementation on the solution.
 
 {% highlight python %}
 books = Book.objects.select_related('store').all()  # Hit the database once and prepopulate the foreign key

@@ -32,7 +32,7 @@ pod init
 That command will create file named Podfile.
 You can specify your dependencies in that file.
 Then run this command to setup your project and install the dependencies.
- 
+
 {% highlight bash %}
 pod install
 {% endhighlight %}
@@ -80,7 +80,7 @@ The other ways to specify dependency version:
 4. ```'< 2.0'``` means any version lower than ```2.0```
 5. ```'<= 2.0'``` means any version lower than ```2.0``` including ```2.0```
 6. ```'2.0'``` means version ```2.0```
-7. leave blank means lastest version
+7. leave blank means latest version
 
 ## Conclusion
 
