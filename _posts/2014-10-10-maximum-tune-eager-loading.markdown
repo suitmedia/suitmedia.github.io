@@ -65,7 +65,7 @@ end
 And this is the Laravel version.
 
 {% highlight php startinline %}
-$books = Book::with('store')->get()  # Hit the database twice and prepopulate the foreign key
+$books = Book::with('store')->get()  // Hit the database twice and prepopulate the foreign key
 foreach ($books as $book) {
     echo $book->store->name;
 }
