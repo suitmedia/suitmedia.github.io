@@ -18,6 +18,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Ubuntu', sans-serif; font-size: 100%; font-weight: 700; color: #615956;}
 
+p {
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
 a         { 
   color: #e86334; 
   text-decoration: none;
@@ -740,5 +746,339 @@ a.pagination-anchor:hover {
   }
   .box {
     padding: 15px;
+  }
+}
+
+
+/* Plugins */
+/* ----------------------------------------------------------*/
+
+/*! Baze Grid v2.0.0 | (c) 2014 @_bobbylie | https://github.com/ImBobby/Baze-Grid */
+.bzg:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.bzg {
+  margin-left: -25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bzg--no-gutter {
+  margin-left: 0;
+}
+.bzg--no-gutter > .bzg_c {
+  padding-left: 0;
+}
+
+.bzg_c {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[data-col*="s1"] {
+  width: 8.33333%;
+}
+
+[data-offset*="s1"] {
+  margin-left: 8.33333%;
+}
+
+[data-col*="s2"] {
+  width: 16.66667%;
+}
+
+[data-offset*="s2"] {
+  margin-left: 16.66667%;
+}
+
+[data-col*="s3"] {
+  width: 25%;
+}
+
+[data-offset*="s3"] {
+  margin-left: 25%;
+}
+
+[data-col*="s4"] {
+  width: 33.33333%;
+}
+
+[data-offset*="s4"] {
+  margin-left: 33.33333%;
+}
+
+[data-col*="s5"] {
+  width: 41.66667%;
+}
+
+[data-offset*="s5"] {
+  margin-left: 41.66667%;
+}
+
+[data-col*="s6"] {
+  width: 50%;
+}
+
+[data-offset*="s6"] {
+  margin-left: 50%;
+}
+
+[data-col*="s7"] {
+  width: 58.33333%;
+}
+
+[data-offset*="s7"] {
+  margin-left: 58.33333%;
+}
+
+[data-col*="s8"] {
+  width: 66.66667%;
+}
+
+[data-offset*="s8"] {
+  margin-left: 66.66667%;
+}
+
+[data-col*="s9"] {
+  width: 75%;
+}
+
+[data-offset*="s9"] {
+  margin-left: 75%;
+}
+
+[data-col*="s10"] {
+  width: 83.33333%;
+}
+
+[data-offset*="s10"] {
+  margin-left: 83.33333%;
+}
+
+[data-col*="s11"] {
+  width: 91.66667%;
+}
+
+[data-offset*="s11"] {
+  margin-left: 91.66667%;
+}
+
+[data-col*="s12"] {
+  width: 100%;
+}
+
+[data-offset*="s12"] {
+  margin-left: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  [data-col*="m"] {
+    margin-left: 0;
+  }
+
+  [data-col*="m1"] {
+    width: 8.33333%;
+  }
+
+  [data-offset*="m1"] {
+    margin-left: 8.33333%;
+  }
+
+  [data-col*="m2"] {
+    width: 16.66667%;
+  }
+
+  [data-offset*="m2"] {
+    margin-left: 16.66667%;
+  }
+
+  [data-col*="m3"] {
+    width: 25%;
+  }
+
+  [data-offset*="m3"] {
+    margin-left: 25%;
+  }
+
+  [data-col*="m4"] {
+    width: 33.33333%;
+  }
+
+  [data-offset*="m4"] {
+    margin-left: 33.33333%;
+  }
+
+  [data-col*="m5"] {
+    width: 41.66667%;
+  }
+
+  [data-offset*="m5"] {
+    margin-left: 41.66667%;
+  }
+
+  [data-col*="m6"] {
+    width: 50%;
+  }
+
+  [data-offset*="m6"] {
+    margin-left: 50%;
+  }
+
+  [data-col*="m7"] {
+    width: 58.33333%;
+  }
+
+  [data-offset*="m7"] {
+    margin-left: 58.33333%;
+  }
+
+  [data-col*="m8"] {
+    width: 66.66667%;
+  }
+
+  [data-offset*="m8"] {
+    margin-left: 66.66667%;
+  }
+
+  [data-col*="m9"] {
+    width: 75%;
+  }
+
+  [data-offset*="m9"] {
+    margin-left: 75%;
+  }
+
+  [data-col*="m10"] {
+    width: 83.33333%;
+  }
+
+  [data-offset*="m10"] {
+    margin-left: 83.33333%;
+  }
+
+  [data-col*="m11"] {
+    width: 91.66667%;
+  }
+
+  [data-offset*="m11"] {
+    margin-left: 91.66667%;
+  }
+
+  [data-col*="m12"] {
+    width: 100%;
+  }
+
+  [data-offset*="m12"] {
+    margin-left: 100%;
+  }
+}
+@media screen and (min-width: 64em) {
+  [data-col*="l"] {
+    margin-left: 0;
+  }
+
+  [data-col*="l1"] {
+    width: 8.33333%;
+  }
+
+  [data-offset*="l1"] {
+    margin-left: 8.33333%;
+  }
+
+  [data-col*="l2"] {
+    width: 16.66667%;
+  }
+
+  [data-offset*="l2"] {
+    margin-left: 16.66667%;
+  }
+
+  [data-col*="l3"] {
+    width: 25%;
+  }
+
+  [data-offset*="l3"] {
+    margin-left: 25%;
+  }
+
+  [data-col*="l4"] {
+    width: 33.33333%;
+  }
+
+  [data-offset*="l4"] {
+    margin-left: 33.33333%;
+  }
+
+  [data-col*="l5"] {
+    width: 41.66667%;
+  }
+
+  [data-offset*="l5"] {
+    margin-left: 41.66667%;
+  }
+
+  [data-col*="l6"] {
+    width: 50%;
+  }
+
+  [data-offset*="l6"] {
+    margin-left: 50%;
+  }
+
+  [data-col*="l7"] {
+    width: 58.33333%;
+  }
+
+  [data-offset*="l7"] {
+    margin-left: 58.33333%;
+  }
+
+  [data-col*="l8"] {
+    width: 66.66667%;
+  }
+
+  [data-offset*="l8"] {
+    margin-left: 66.66667%;
+  }
+
+  [data-col*="l9"] {
+    width: 75%;
+  }
+
+  [data-offset*="l9"] {
+    margin-left: 75%;
+  }
+
+  [data-col*="l10"] {
+    width: 83.33333%;
+  }
+
+  [data-offset*="l10"] {
+    margin-left: 83.33333%;
+  }
+
+  [data-col*="l11"] {
+    width: 91.66667%;
+  }
+
+  [data-offset*="l11"] {
+    margin-left: 91.66667%;
+  }
+
+  [data-col*="l12"] {
+    width: 100%;
+  }
+
+  [data-offset*="l12"] {
+    margin-left: 100%;
   }
 }
