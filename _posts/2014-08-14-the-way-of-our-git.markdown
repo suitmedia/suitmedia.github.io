@@ -33,7 +33,7 @@ This way, we believe it will make out development quality is better and happier.
 
 [git]: http://git-scm.com/
 [git-flow]: http://nvie.com/posts/a-successful-git-branching-model/
-[master-develop]: http://nvie.com/img/2009/12/bm002.png
+[master-develop]: http://nvie.com/img/main-branches@2x.png
 [gitignore]: http://git-scm.com/docs/gitignore
 [github-gitignore]: https://github.com/github/gitignore
 [semver]: http://semver.org/
