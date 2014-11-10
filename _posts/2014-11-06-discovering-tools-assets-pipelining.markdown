@@ -4,7 +4,7 @@ title:    "Discovering Tools: Assets Pipeline"
 date:     2014-11-06 00:00:00
 author:   Edwin Lunando
 author_t: edwinlunando
-excerpt:
+excerpt: Assets pipeline to improve the web app performance
 ---
 
 Welcome back to discovering tools, a series to discuss tools that make us, developers, productive and happy! In this episode, we will cover a tools that help us delivering high performance web applications. It is called assets pipeline. HTTP 1.1 has several limitations on retrieving static assets file. It only allow 6 connections per origin. In a case where a web app has enormous amount of static files, it will surely increase the load time. So, assets pipeline is a concept to concatenate and compress javascript or CSS files so that, the browser only need to retrieve minimum amount of assets files to make the page load faster. Here are the pros of assets pipelining.
