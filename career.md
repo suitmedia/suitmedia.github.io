@@ -6,7 +6,7 @@ author:     Anggriawan Sugianto
 author_t:   anggriawan
 ---
 
-As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is continuously seeking for great talents to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer in the team, you will grow together with us and get many great experiences.
+As a fast-growing digital agency, [Suitmedia](http://www.suitmedia.com) is continuously seeking for great talents to develop high-quality web and mobile applications. Our engineering team is not only working on various projects with fascinating brands, but also developing products that have good impacts to the society. As an engineer or analyst in the team, you will grow together with us and get many great experiences.
 
 What is interesting about working at Suitmedia?
 
@@ -38,7 +38,7 @@ Requirements:
 
 Location:
 
-* Jakarta (Web Developer)
+* Jakarta
 
 
 MOBILE APP DEVELOPER
@@ -57,7 +57,7 @@ Qualification:
 
 Location:
 
-* Bandung (Android Developer)
+* Bandung
 
 
 ANALYST
@@ -78,7 +78,6 @@ Qualification:
 Location:
 
 * Jakarta (System Analyst)
-* Bandung (Mobile Solution Analyst)
 
 
 If you feel that you meet the above qualification and would like to be part of us, please send your complete resume to [job@suitmedia.com](mailto:job@suitmedia.com?cc=yoga@suitmedia.com,vita@suitmedia.com&subject=APPLY : <Enter Your Wanted Position Here>).
