@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="description" content="Baze is a front-end starter template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    
+    <title>Suitmedia CSS and SCSS Styleguides</title>
+
+    <link rel="apple-touch-icon-precomposed" href="/styleguides/img/apple-icon.png" sizes="152x152">
+    <link rel="icon" type="image/png" href="/styleguides/img/favicon.png">
+    
+    <link rel="stylesheet" href="/styleguides/css/normalize.css">
+    <link rel="stylesheet" href="/styleguides/css/baze-grid.css">
+    <link rel="stylesheet" href="/styleguides/css/main.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">Suitmedia <br>CSS/SCSS Styleguides</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2 class="heading-subchapter">CSS Declaration</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Urutan deklarasi properti CSS adalah:</p>
+
+                        <ol>
+                            <li>Mixin</li>
+                            <li>Position</li>
+                            <li>Box model</li>
+                            <li>Type</li>
+                            <li>Visual</li>
+                            <li>Misc</li>
+                            <li>Pseudo element</li>
+                            <li>Pseudo class</li>
+                        </ol>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">selector {
+    @include thing1;
+    @include thing2;
+    
+    // Position
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    
+    // Box model
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    border: solid 1px #222;
+    margin: 0 auto;
+
+    // Type
+    font: 400 16px sans-serif;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    color: #222;
+
+    // Visual
+    background: #eee;
+    box-shadow: inset 0 0 2px #555;
+    cursor: auto;
+    opacity: 1;
+    transform: scale(1);
+
+    // Misc
+    transition: all .3s ease;
+
+    // Pseudo element
+    &:before,
+    &:after {
+        ...
+    }
+
+    // Pseudo class
+    &:first-child {
+        ...
+    }
+
+    &:hover {
+        ...
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Avoid deep nesting</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Maksimal nesting adalah 3 level, lebih dari itu hindari. Nesting level paling akhir apabila adalah Pseudo Class atau Pseudo Element diperbolehkan.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">// Bad
+ul {
+    li {
+        a {
+            span {
+                ...
+            }
+        }
+    }
+}
+
+// Good
+ul {
+    li {
+        a {
+            ...
+        }
+    }
+}
+
+ul {
+    li {
+        a {
+            &:hover {
+                ...
+            }
+        }
+    }
+}</code></pre>        
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Z-Index</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Maksimal nilai z-index adalah 20, tidak boleh lebih.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="css">header {
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.modal {
+    position: absolute;
+    z-index: 20;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Spacing and new lines</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Agar lebih mudah dibaca dan maintainable, tambahkan space dan new line secukupnya.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">// Bad
+a{
+    prop: value;
+    &:hover,&:focus{
+        prop: value;
+    }
+    &:active{
+        prop: value;
+    }
+    span{
+        color: #999;
+    }
+}
+button{
+    ...
+}
+
+// Good
+a {
+    prop: value;
+
+    &:hover,
+    &:focus {
+        prop: value;
+    }
+
+    &:active {
+        prop: value;
+    }
+
+    span {
+        color: #999;
+    }
+}
+
+button {
+    ...
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">CSS Prefixing</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>CSS prefixing di-handle oleh autoprefixer, jadi tidak perlu menambahkan vendor-prefix secara manual atau menggunakan mixin.</p>
+                        <p>Perlu diketahui autoprefixer hanya meng-parse <strong>CSS property official yang telah ditetapkan oleh W3.</strong>. Jadi property <code>appearance</code> apabila memang ingin digunakan, harus input vendor prefix secara manual.</p>
+                        <p>Khusus gradient, ikuti <a href="//developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">deklarasi yang telah ditetapkan oleh W3</a>.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">.box {
+    background-image: linear-gradient(to bottom, #fff, #eee);
+    transform: scale(1);
+    transition: all .3s ease;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">No ID and !important in CSS</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Jangan ada deklarasi ID ataupun !important di dalam CSS karena ID memiliki tingkat <a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">specificity yang tinggi</a>.</p>
+                        <p>Apabila memang terpaksa harus menggunakan, gunakan attribute selector. Ini adalah sebuah hack dan sebisa mungkin jangan sampai ada.</p>
+                        <p>Penggunakan <code>!important</code> hanya diperbolehkan untuk override style 3<sup>rd</sup> party ataupun style plugin.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="css">/* NO! */
+#myElem {
+    prop: value;
+}
+
+button {
+    padding: .5em 1em !important;
+}
+
+/* YES! */
+[id="myElem"] {
+    prop: value;
+}
+
+button {
+    padding: .5em 1em !important;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Avoid contextual styles</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Intinya jangan buat style yang medeskripsikan untuk apa atau untuk siapa style itu ditujukan.</p>
+                        <p>Styles harus dibuat se-abstract mungkin agar dapat dipakai berkali-kali dan dapat dipakai untuk segala konteks.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="css">/* NO! */
+.btn-download {
+    prop: value;
+}
+
+/* YES! */
+.btn-primary {
+    prop: value;
+}
+
+/* NO! */
+.faq-wrapper {
+    width: 400px;
+}
+
+/* YES! */
+.container {
+    width: 800px;
+}
+
+.container--small {
+    width: 400px;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Don't change base style</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Jangan menambahkan/mengubah behavior style yang sudah dimiliki tiap element. Apabila ingin melakukan itu, gunakan class.</p>
+                        <p>Hal ini untuk mencegah hal yang tidak diinginkan apabila user meng-input content dari editor.</p>
+                        <p>Kalaupun memang ada style khusus untuk tiap-tiap element contoh untuk article, wrap dengan sebuah class lalu declare contextual style berdasarkan wrappernya.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">// NO!
+h1 {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+textarea {
+    min-height: 90px;
+    -webkit-appearance: none;
+}
+
+ul {
+    width: 400px;
+}
+
+// YES!
+.heading {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.field {
+    min-height: 90px;
+    -webkit-appearance: none;
+}
+
+.list {
+    width: 400px;
+}
+
+//Contextual Style
+.article {
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Use class to style, avoid using tag.</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Sebisa mungkin hindari memberi style menggunakan tag element. Gunakan class agar style yang dibuat scalable dan lebih mudah di maintain.</p>
+                        <p>Selain itu apabila ke depannya markup diubah, artinya kita harus mengubah css kita juga. Dengan menggunakan class, walau markup berubah, tidak akan mempengaruhi style.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="css">/* NO! */
+.highlight {
+    float: left;
+    width: 30%;
+    margin: 0 3%;
+
+    h2 {
+        text-transform: capitalized;
+    }
+
+    ul {
+        color: #444;
+    }
+}
+
+/* GOOD! */
+.highlight {
+    float: left;
+    width: 30%;
+    margin: 0 3%;
+}
+
+.highlight-title {
+    text-transform: capitalized;
+}
+
+.highlight-list {
+    color: #444;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Don't use BEM SCSS shortcut</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Memang memudahkan jadi tidak perlu menulis berulang-ulang, namun itu membuat file .scss susah untuk di index/search dan akan merepotkan developer penerus.</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">/* NO! */
+.highlight {
+    ...
+
+    &__title {
+        ...
+    }
+
+    &__list {
+        ...
+    }
+}
+
+/* YES! */
+.highlight {
+    ...
+}
+
+.highlight__title {
+    ...
+}
+
+.highlight__list {
+    ...
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Don't CSS use @import</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Alasan kenapa jangan menggunakan <code>@import</code> adalah:</p>
+
+                        <ul>
+                            <li>File CSS yang dipanggil via @import tidak di cache di browser.</li>
+                            <li>File CSS yang dipanggil via @import tidak dapat didownload oleh browser secara paralel.</li>
+                            <li>Mengurangi performance web.</li>
+                        </ul>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">/* NO! */
+@import url('hello.css');</code></pre> &nbsp;
+                                
+<pre><code class="html">&lt;!-- YES! -->
+&lt;link rel="stylesheet" href="hello.css"&gt;
+&lt;!-- or use scss import --></code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="heading-subchapter">Use transform and opacity for high performance animation</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5" data-sticky>
+                        <p>Untuk membuat animasi contoh pada saat image di hover, image membesar, jangan gunakan width dan height.</p>
+                        <p>Gunakan property <code>transform</code> agar dapat dirender menggunakan GPU, bukan CPU. Pada dasarnya, untuk mendapatkan high performance animation, gunakan:</p>
+                        <ul>
+                            <li>Translate</li>
+                            <li>Scale</li>
+                            <li>Rotate</li>
+                            <li>Opacity</li>
+                        </ul>
+                    </div>
+                    <div class="bzg_c" data-col="l7" data-sticky>
+<pre><code class="scss">/* NO! */
+div {
+    position: relative;
+    top: 0;
+    transition: all .3s ease;
+
+    &:hover {
+        top: 100%;
+    }
+}
+
+/* YES! */
+div {
+    trasnform: translateY(0);
+    transition: all .3s ease;
+
+    &:hover {
+        transform: translateY(100%);
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/styleguides/js/main.js"></script>
+</body>
+</html>
