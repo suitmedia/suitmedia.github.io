@@ -123,10 +123,11 @@ pre {
     text-transform: uppercase;
     color: #fff;
     background: #333;
-    background: #ff7848;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#E2683C), to(#BE532C));
+    background: #BE532C;
+    /*background-image: -webkit-gradient(linear, left top, left bottom, from(#E2683C), to(#BE532C));
     background-image: -webkit-linear-gradient(top, #E2683C, #BE532C);
-    background-image: linear-gradient(to bottom, #E2683C, #BE532C);
+    background-image: linear-gradient(to bottom, #E2683C, #BE532C);*/
+    background-image: url('../img/axiom-pattern.png');
 }
 
 
@@ -385,6 +386,30 @@ pre code {
 
 .quote-msg {
     margin-bottom: .8em;
+}
+
+
+/* Breadcrumbs
+--------------------------------------------------------------------------- */
+
+.breadcrumb {
+    padding: 0;
+    margin: 0 0 1.6em 0;
+    list-style: none;
+}
+
+.breadcrumb li {
+    position: relative;
+    display: inline-block;
+}
+
+.breadcrumb li:after {
+    margin: 0 .4em;
+    content: '\2192';
+}
+
+.breadcrumb li:last-child:after {
+    content: '';
 }
 
 
