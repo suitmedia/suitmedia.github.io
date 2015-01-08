@@ -15,4 +15,4 @@ On this presentation we will take another look about the elements of UX, process
 - what is it that users need 
 - how can the product help us with the business needs
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/42333948" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<iframe src="//www.slideshare.net/slideshow/embed_code/42333948" width="660" height="538" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
