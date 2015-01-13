@@ -98,7 +98,8 @@ ul,
 ol,
 hr,
 table,
-pre {
+pre,
+dl {
     font-size: 1em;
     line-height: 1.6em;
     margin: 0 0 1.6em 0;
