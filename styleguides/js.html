@@ -36,6 +36,33 @@
             </nav>
 
             <section class="section">
+                <h2 class="heading-subchapter">Code structure</h2>
+
+                <div class="bzg">
+                    <div class="bzg_c" data-col="l5">
+                        <p>Suitmedia menggunakan object literal sebagai struktur kode yang di mana dibungkus ke dalam sebuah IIFE (Immediately-invoked function expression).</p>
+                    </div>
+                    <div class="bzg_c" data-col="l7">
+<pre><code class="javascript">;(function ( window, document, undefined ) {
+    var Site = {
+        
+        init: function () {
+            this.feature1();
+        },
+
+        feature1: function () {
+
+        }
+    };
+
+    Site.init();
+})( window, document );
+</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
                 <h2 class="heading-subchapter">Deklarasi variable</h2>
 
                 <div class="bzg">
