@@ -364,7 +364,21 @@ pre code {
 }
 
 .heading-subchapter {
+    position: relative;
     border-bottom: solid 2px #555;
+}
+
+.heading-subchapter-anchor {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: none;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+.heading-subchapter:hover .heading-subchapter-anchor {
+    display: block;
 }
 
 .quote {
