@@ -62,7 +62,6 @@ function loadJS( src, cb ){
 
         init: function () {
             Site.syntaxHighlighter();
-            Site.titleParallax();
             Site.consoleMessage();
         },
 
@@ -78,22 +77,6 @@ function loadJS( src, cb ){
             loadCSS('//fonts.googleapis.com/css?family=Inconsolata');
             loadCSS('//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night.min.css');
             loadJS('//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js', initPlugin);
-        },
-
-        titleParallax: function () {
-            var header  = document.querySelector('.main-header'),
-                title   = document.querySelector('.page-title'),
-
-                headerHeight    = header.clientHeight,
-                MULTIPLIER      = 3;
-
-            window.addEventListener('scroll', function () {
-                var pos = window.scrollY;
-
-                if ( scrollY < headerHeight ) {
-                    title.style.transform = 'translateY(' + pos/MULTIPLIER + 'px)';
-                }
-            }, false);
         },
 
         consoleMessage: function () {
