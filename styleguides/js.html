@@ -138,11 +138,13 @@ var list = [];
                         <p>Prefix jQuery object menggunakan karakter '$' untuk membedakan antara jQuery Object dengan DOM Element</p>
                     </div>
                     <div class="bzg_c" data-col="l7" data-sticky>
-<pre><code class="javascript">// bad
-var btn = $('button');
+<pre><code class="javascript">// Not good
+var btnSubmit = $('#btnSubmit');
+var btnCancel = document.querySelector('#btnCancel');
 
-// good
-var $btn = $('button');
+// Much better
+var $btnSubmit = $('#btnSubmit');
+var btnCancel  = document.querySelector('#btnCancel');
 </code></pre>
                     </div>
                 </div>
