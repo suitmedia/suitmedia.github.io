@@ -14,26 +14,29 @@ Jadi `<canvas>` adalah salah satu tag yang disediakan oleh HTML5 yang dapat kita
 
 Contoh sederhana:
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contoh Canvas</title>
-    </head>
-    <body>
-        <canvas id='canvasId' width='500' height='500'></canvas>
-    </body>
-    <script>
-        var canvas = document.getElementById('canvasId');
-        var context = canvas.getContext("2d");
-        
-        context.beginPath();
-        context.moveTo(100, 150);
-        context.lineTo(450, 50);
-        context.lineWidth = 15;
-        context.stroke();
-    </script>
-    });
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contoh Canvas</title>
+</head>
+<body>
+    <canvas id='canvasId' width='500' height='500'></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('canvasId');
+    var context = canvas.getContext("2d");
+    
+    context.beginPath();
+    context.moveTo(100, 150);
+    context.lineTo(450, 50);
+    context.lineWidth = 15;
+    context.stroke();
+</script>
+</html>
+
+{% endhighlight %}
 
 
 Nah, itu tadi contoh *simple* kalau kita mau gambar sesuatu pada tag `canvas`.
@@ -45,73 +48,83 @@ Tapi, sekarang saya mau jelasin tentang suatu *canvas library* yang bisa kita pa
 
 * Pertama, kita harus import file javascript kedalam HTML kita. 
 File javascript pixi.js dapat kita ambil dari <a href="https://github.com/GoodBoyDigital/pixi.js">sini</a>
-
-        <script src="pixi.js"></script>
+    
+{% highlight html %}
+<script src="pixi.js"></script>
+{% endhighlight %}
 
 * Kedua, kita buat renderernya :)
-
-        <script>
-            var renderer = new PIXI.autoDetectRenderer(400,300);
-            document.body.appendChild(renderer.view);
-        </script>
+    
+{% highlight html %}
+<script>
+    var renderer = new PIXI.autoDetectRenderer(400,300);
+    document.body.appendChild(renderer.view);
+</script>
+{% endhighlight %}
 
 * Terus, kita buat stage dan tampilin deh !
+        
+{% highlight html %}
+<script>
+    var renderer = new PIXI.autoDetectRenderer(400,300);
+    document.body.appendChild(renderer.view);
 
-        <script>
-            var renderer = new PIXI.autoDetectRenderer(400,300);
-            document.body.appendChild(renderer.view);
-
-            var stage = new PIXI.Stage(0xFFD800);
-            
-            renderer.render(stage);
-        </script>
+    var stage = new PIXI.Stage(0xFFD800);
+    
+    renderer.render(stage);
+</script>
+{% endhighlight %}
 
 * Lalu, kita bikin fungsi untuk buat animasinya
 
-        <script>
-            var renderer = new PIXI.autoDetectRenderer(400,300);
-            document.body.appendChild(renderer.view);
+{% highlight html %}
+<script>
+    var renderer = new PIXI.autoDetectRenderer(400,300);
+    document.body.appendChild(renderer.view);
 
-            var stage = new PIXI.Stage(0xFFD800);
+    var stage = new PIXI.Stage(0xFFD800);
 
-            requestAnimFrame(animation);
+    requestAnimFrame(animation);
 
-            function animation () {
+    function animation () {
 
-                renderer.render(stage);
-                requestAnimFrame(animation);
-            }
-        </script>
+        renderer.render(stage);
+        requestAnimFrame(animation);
+    }
+</script>
+{% endhighlight %}
 
 * Terakhir, kita bisa buat apa aja deh yang kita mau :).
 Disini saya coba buat animasi gambar kelinci yang ada animasi *rotate*nya
 
-        <script>
-            var renderer = new PIXI.autoDetectRenderer(400,300);
-            document.body.appendChild(renderer.view);
+{% highlight html %}
+<script>
+    var renderer = new PIXI.autoDetectRenderer(400,300);
+    document.body.appendChild(renderer.view);
 
-            var stage = new PIXI.Stage(0xFFD800);
+    var stage = new PIXI.Stage(0xFFD800);
 
-            var texture = new PIXI.Texture.fromImage('bunny.png');
-            var bunny = new PIXI.Sprite(texture);
+    var texture = new PIXI.Texture.fromImage('bunny.png');
+    var bunny = new PIXI.Sprite(texture);
 
-            bunny.position.x = 200;
-            bunny.position.y = 150;
-            bunny.anchor.x = 0.5;
-            bunny.anchor.y = 0.5;
+    bunny.position.x = 200;
+    bunny.position.y = 150;
+    bunny.anchor.x = 0.5;
+    bunny.anchor.y = 0.5;
 
-            stage.addChild(bunny);
+    stage.addChild(bunny);
 
-            requestAnimFrame(animation);
+    requestAnimFrame(animation);
 
-            function animation () {
+    function animation () {
 
-                bunny.rotation += 1;
+        bunny.rotation += 1;
 
-                renderer.render(stage);
-                requestAnimFrame(animation);
-            }
-        </script>
+        renderer.render(stage);
+        requestAnimFrame(animation);
+    }
+</script>
+{% endhighlight %}
 
 Nah simple kan? :)
 
