@@ -67,39 +67,6 @@
                 </div>
             </section>
 
-            <section class="section" id="varDeclaration">
-                <h2 class="heading-subchapter">
-                    <a class="heading-subchapter-anchor" href="#varDeclaration" aria-label="Permalink to this section">
-                        &sect;
-                    </a>
-                    Deklarasi variable
-                </h2>
-
-                <div class="bzg">
-                    <div class="bzg_c" data-col="l5" data-sticky>
-                        <p>Gabungkan semua deklarasi dalam satu <code>var</code>. Urutannya adalah:</p>
-
-                        <ul>
-                            <li>Akses DOM</li>
-                            <li>Statement</li>
-                            <li>Variable kosong</li>
-                        </ul>
-                    </div>
-                    <div class="bzg_c" data-col="l7" data-sticky>
-<pre><code class="javascript">// bad
-var active = 'active';
-var temp;
-var list = $('.list');
-
-// good
-var list    = $('.list'),
-    active  = 'active',
-    temp;
-</code></pre>
-                    </div>
-                </div>
-            </section>
-
             <section class="section" id="literalExpression">
                 <h2 class="heading-subchapter">
                     <a class="heading-subchapter-anchor" href="#literalExpression" aria-label="Permalink to this section">
